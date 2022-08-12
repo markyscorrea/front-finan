@@ -1,0 +1,21 @@
+<div>
+    <nb-card [nbSpinner]="loading" nbSpinnerSize="giant" nbSpinnerStatus="primary">
+        <nb-card-body>
+            <nb-tabset>
+                <nb-tab tabTitle="Cadastro">
+
+                    <app-formulario-categorias actionButton="Cadastrar"></app-formulario-categorias>
+
+                </nb-tab>
+                <nb-tab tabTitle="Pesquisa">
+
+                    <app-tabela-categorias></app-tabela-categorias>
+
+                </nb-tab>
+            </nb-tabset>
+        </nb-card-body>
+    </nb-card>
+</div>
+<div>
+    <app-button-alert *ngIf="fieldAlert" infoAlert="{{message}}" status="{{status}}"></app-button-alert>
+</div>

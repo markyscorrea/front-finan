@@ -1,0 +1,24 @@
+<div>
+  <nb-card [nbSpinner]="loading" nbSpinnerSize="giant" nbSpinnerStatus="primary">
+    <nb-card-header class="text-center">
+      Receitas X Despesas
+    </nb-card-header>
+    <nb-card-body>
+          <ngx-charts-pie-chart
+            *ngIf="data.length > 0"
+            [view]="view" 
+            [scheme]="colorScheme" 
+            [results]="data" 
+            [legendTitle]="'Dados'" 
+            [gradient]="gradient"
+            [legend]="showLegend" 
+            [legendPosition]="legendPosition" 
+            [labels]="showLabels" 
+            [doughnut]="isDoughnut">
+          </ngx-charts-pie-chart>
+    </nb-card-body>
+  </nb-card>
+</div>
+<div>
+  <app-button-alert *ngIf="fieldAlert" infoAlert="{{message}}" status="{{status}}"></app-button-alert>
+</div>

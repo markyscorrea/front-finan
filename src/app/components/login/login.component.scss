@@ -1,0 +1,32 @@
+:host {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+
+    nb-card-header {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    nb-card-footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .link-cadastro {
+        text-align: center;
+    }
+    
+    form {
+        input, a {
+            margin-bottom: 15px;
+        }
+    }
+    
+    .fieldAlert {
+        height: 100px;
+        width: 28vw;
+        position: absolute;
+        bottom: 0;
+    }
+}

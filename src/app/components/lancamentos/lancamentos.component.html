@@ -1,0 +1,19 @@
+<div>
+    <nb-card [nbSpinner]="loading" nbSpinnerSize="giant" nbSpinnerStatus="primary">
+        <nb-card-body>
+            <nb-tabset>
+                <nb-tab tabTitle="Cadastro">
+
+                    <app-formulario-lancamentos actionButton="Cadastrar"></app-formulario-lancamentos>
+
+                </nb-tab>
+                <nb-tab tabTitle="Pesquisa">
+
+                    <app-tabela-lancamentos></app-tabela-lancamentos>
+
+                </nb-tab>
+            </nb-tabset>
+        </nb-card-body>
+    </nb-card>
+</div>
+<app-button-alert class="buttonAlert" *ngIf="fieldAlert" infoAlert="{{message}}" status="{{status}}"></app-button-alert>

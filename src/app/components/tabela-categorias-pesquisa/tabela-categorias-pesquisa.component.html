@@ -1,0 +1,24 @@
+<label class="search-label" for="search">Pesquisa:</label>
+<input nbInput [nbFilterInput]="dataSource" id="search" class="search-input">
+
+<table [nbTreeGrid]="dataSource">
+
+    <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+    <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+
+    <ng-container [nbTreeGridColumnDef]="customColumn">
+        <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+            <div class="d-flex justify-content-between">
+                <span>{{customColumn}}</span>
+                <span>Selecionar</span>
+            </div>
+        </th>
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
+            <div class="d-flex justify-content-between">
+                <span>{{row.data[customColumn]}}</span>
+                <nb-icon class="btnSelect" icon="checkmark-outline" (click)="selecionarPessoa(row.data.Nome, row.data.tipo)"></nb-icon>
+            </div>
+        </td>
+    </ng-container>
+
+</table>

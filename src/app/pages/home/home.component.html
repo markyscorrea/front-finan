@@ -1,0 +1,32 @@
+<nb-layout center>
+    <nb-layout-header fixed>
+        <div class="header">
+            <img src="../../../assets/img/finan.png" alt="logo">
+        </div>
+    </nb-layout-header>
+
+    <nb-sidebar>
+
+        <div class="menu">
+            <nb-menu [items]="items" (click)="verificaUrl()">
+            </nb-menu>
+            <nb-menu class="logout" [items]="logout" (click)="logoutUser()">
+            </nb-menu>
+        </div>
+
+    </nb-sidebar>
+
+    <nb-layout-column class="teste">
+
+        <div class="homeWindow">
+            <h1>
+                {{title}}
+            </h1>
+    
+            <router-outlet></router-outlet>
+        </div>
+
+    </nb-layout-column>
+
+
+</nb-layout>

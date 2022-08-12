@@ -1,0 +1,12 @@
+<form [formGroup]="categoriaForm" (ngSubmit)="submit()">
+    <div class="formCategoria">
+        <input type="text" nbInput placeholder="Categoria" formControlName="descricao">
+        <nb-select placeholder="Tipo Categoria" [(selected)]="selectedItem" formControlName="tipo">
+            <nb-option value="c">Crédito</nb-option>
+            <nb-option value="d">Débito</nb-option>
+        </nb-select>
+        <button nbButton status="info">
+            {{ actionButton }}
+        </button>
+    </div>
+</form>

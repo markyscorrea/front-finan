@@ -1,0 +1,17 @@
+<form [formGroup]="lancamentoUpdateForm" (ngSubmit)="submit()">
+    <input class="mt-2" type="text" nbInput fullWidth placeholder="Descrição" formControlName="descricao">
+    <div class="d-flex justify-content-between mt-2">
+        <nb-form-field>
+            <span nbPrefix>R$</span>
+            <input type="text" step="any" nbInput placeholder="Valor" currencyMask [formControlName]="'valor'" [options]="{ prefix: '', thousands: '.', decimal: ',', align : 'left' }">
+        </nb-form-field>
+        <nb-form-field>
+            <nb-icon nbPrefix icon="calendar-outline" pack="eva"></nb-icon>
+            <input nbInput placeholder="Entrada/Vencimento" [nbDatepicker]="dateTimePicker" formControlName="data">
+            <nb-datepicker #dateTimePicker></nb-datepicker>
+        </nb-form-field>
+    </div>
+    <button nbButton fullWidth status="info" class="mt-2">
+        {{ actionButton }}
+    </button>
+</form>

@@ -1,0 +1,14 @@
+<form [formGroup]="pessoaForm" (ngSubmit)="submit()">
+    <input class="mt-2" type="text" nbInput fullWidth placeholder="Nome / Razão Social" formControlName="nome">
+    <div class="formPessoa">
+        <input type="text" nbInput size="large" placeholder="CPF/CNPJ"
+            mask="000.000.000-00 || 00.000.000/0000-00" formControlName="cpf_cnpj">
+        <nb-select placeholder="Tipo Pessoa" [(selected)]="selectedItem" formControlName="tipo">
+            <nb-option value="f">Física</nb-option>
+            <nb-option value="j">Jurídica</nb-option>
+        </nb-select>
+        <button nbButton status="info">
+            {{ actionButton }}
+        </button>
+    </div>
+</form>

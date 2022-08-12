@@ -1,0 +1,32 @@
+<form [formGroup]="lancamentoForm" (ngSubmit)="submit()">
+    <input class="mt-2" type="text" nbInput fullWidth placeholder="Descrição" formControlName="descricao">
+    <div class="d-flex justify-content-between mt-2">
+        <nb-select placeholder="Modelo de Conta" [(selected)]="selectedItemTipoConta" formControlName="tipo_conta">
+            <nb-option value="1">Receita</nb-option>
+            <nb-option value="2">Despesa</nb-option>
+        </nb-select>
+        <nb-form-field>
+            <span nbPrefix>R$</span>
+            <input type="text" step="any" nbInput placeholder="Valor" currencyMask [formControlName]="'valor'" [options]="{ prefix: '', thousands: '.', decimal: ',', align : 'left' }">
+        </nb-form-field>
+        <input type="text" nbInput placeholder="Pessoa" (click)="openWindowPessoa()" [(ngModel)]="pessoaValue" [ngModelOptions]="{standalone: true}">
+
+    </div>
+
+    <div class="d-flex justify-content-between mt-2">
+        <nb-select placeholder="Tipo Conta" [(selected)]="selectedItemTipo" formControlName="tipo">
+            <nb-option value="c">Crédito</nb-option>
+            <nb-option value="d">Débito</nb-option>
+        </nb-select>
+        <nb-form-field>
+            <nb-icon nbPrefix icon="calendar-outline" pack="eva"></nb-icon>
+            <input nbInput placeholder="Entrada/Vencimento" [nbDatepicker]="dateTimePicker" formControlName="data">
+            <nb-datepicker #dateTimePicker></nb-datepicker>
+        </nb-form-field>
+        <input type="text" nbInput placeholder="Categoria" (click)="openWindowCategoria()" [(ngModel)]="categoriaValue" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button nbButton fullWidth status="info" class="mt-2">
+        {{ actionButton }}
+    </button>
+</form>
