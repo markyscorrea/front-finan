@@ -1,27 +1,62 @@
-# FrontFinan
+# ➡[SPA com Angular 2+ e Nebular](https://front-finan.herokuapp.com/)⬅
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Teaser: 
 
-## Development server
+<img src='./src/assets/img/gif.gif'>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔖Sobre
 
-## Code scaffolding
+- CRUD coleções
+- Dashboard
+- Lazy loading
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 💻Teconologias Utilizadas
+- Angular 2+
+- Typescript/Javascript
+- NodeJS/Express
+- SAAS
+- Nebular
+- Bootstrap
+- Ngx-Charts
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💾Instalação
 
-## Running unit tests
+**Instalar Angular CLI:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+$ npm install -g @angular/cli
+```
 
-## Running end-to-end tests
+**Instalar dependencias:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```shell
+$ npm install
+```
+**Execução:** 
 
-## Further help
+```
+ng serve -o
+```
+**📌OBSERVAÇÕES**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Variável de ambiente **PORTA_URL** encontrada em **src/environments** Já se encontra preenchida com acesso a API.
+
+---
+
+**LINKS EXTERNOS**
+
+API:
+- [Repositório](https://github.com/markyscorrea/back-finan)
+- [Documentação em nuvem](https://back-finan.herokuapp.com/api-docs/)
+
+SPA:
+- [Resultado em nuvem](https://front-finan.herokuapp.com/login)
+
+
+**Ambos os projetos tiveram seus resultados publicados no servidor de hospedagem gratuito HEROKU.**
+
+---
+
+Desenvolvido por Márkys Corrêa.
